@@ -1,0 +1,22 @@
+<section>
+  <mat-card>
+    <mat-card-content>
+      <form>
+        <mat-form-field style="width: 100%">
+          <input type="text" matInput [(ngModel)]="client.firstName" name="first">
+        </mat-form-field>
+        <mat-form-field style="width: 100%">
+          <input type="text" matInput [(ngModel)]="client.lastName" name="last">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <p>
+        {{client.firstName}}
+      </p>
+      <p>
+        {{client.lastName}}
+      </p>
+    </mat-card-actions>
+  </mat-card>
+</section>

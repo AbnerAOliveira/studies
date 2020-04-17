@@ -1,0 +1,13 @@
+.card-radio{
+  padding: 20px 200px 10px 200px;
+}
+mat-radio-group{
+  display: inline-flex;
+  flex-direction: column;
+}
+mat-radio-button {
+   margin: 5px;
+}
+mat-card-footer {
+  padding: 20px 20px 20px 20px;
+}

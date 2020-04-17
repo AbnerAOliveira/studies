@@ -1,0 +1,44 @@
+<p>event-binding works!</p>
+
+<section>
+  <button mat-button color="primary" (click)="zeroCountButton()">Button</button>
+  <button mat-button color="warn" (click)="countClickButton()">{{nameButton}}</button>
+</section>
+
+<section>
+  <button mat-button color="primary" [disabled]="!btnEnable">Button 1</button>
+  <button mat-button color="accent" [disabled]="!btnEnable">Button 2</button>
+
+  <button mat-button color="warn" [disabled]="!btnEnable" (click)="loadDisable()">Disable</button>
+
+  <mat-progress-spinner
+    color="primary"
+    [mode]="spinnerButton"
+    value="{{valueSpinner}}">
+  </mat-progress-spinner>
+</section>
+
+<section>
+  <mat-card>
+    <mat-card-content>
+      <p>
+        <mat-checkbox (change)="changeState($event)"> Disable Select</mat-checkbox>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-select matNativeControl required [disabled]="enableCB" (valueChange)="selectOption($event)">
+            <mat-option value="1">A</mat-option>
+            <mat-option value="2">B</mat-option>
+            <mat-option value="3">C</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-card-actions *ngIf="optionSelectedBool">
+          {{optionSelected}}
+        </mat-card-actions>
+      </p>
+    </mat-card-content>
+
+  </mat-card>
+</section>

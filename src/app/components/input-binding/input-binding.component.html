@@ -1,0 +1,8 @@
+<p>Name: {{name}}</p>
+<p>Age: {{age}}</p>
+
+
+<h1>My People</h1>
+<div *ngFor="let p of people">
+  <app-people [people]="p"></app-people>
+</div>

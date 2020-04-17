@@ -1,0 +1,11 @@
+<div>
+  <button mat-button color="primary" (click)="stopwatch.start()">Start</button>
+  <button mat-button color="accent" (click)="stopwatch.stop()">Stop</button>
+  <button mat-button color="warn" (click)="stopwatch.zero()">Cancel</button>
+</div>
+<app-timer #stopwatch></app-timer>
+<hr>
+<button mat-button color="primary" (click)="start()">Start</button>
+<app-timer #stopwatch2></app-timer>
+
+<p #myP>Hillo</p>

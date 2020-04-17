@@ -1,0 +1,28 @@
+.card-class {
+  padding: 10px 200px 20px 200px;
+}
+
+.myclass1 {
+  color: #e6ebf1;
+  background-color: #1976d2;
+}
+
+.myclass2 {
+  color: aqua;
+  background-color: #24292e;
+}
+
+.myclass3 {
+  color: #e90e0b;
+  background-color: #b0c9e1;
+}
+
+.myclass4 {
+  color: #000707;
+  background-color: #1ec44b;
+}
+
+
+mat-card-footer {
+  padding: 20px 20px 20px 20px;
+}

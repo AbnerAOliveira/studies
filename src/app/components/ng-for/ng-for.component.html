@@ -1,0 +1,45 @@
+<section>
+  <mat-card>
+    <mat-card-title>
+      <h1>Names</h1>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let n of names">
+          <h1 matLine>{{n}}</h1>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section>
+  <mat-card>
+    <mat-card-title>
+      <h1>States</h1>
+    </mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let s of states">
+          <h1 matLine>{{s.name}}</h1>
+          <h1 matLine>{{s.sigla}}</h1>
+        </mat-list-item>
+        <h1></h1>
+        <h1></h1>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section>
+  <mat-card>
+    <mat-card-content>
+      <mat-selection-list #nombre>
+        <mat-list-option *ngFor="let n of names">{{n}}</mat-list-option>
+      </mat-selection-list>
+    </mat-card-content>
+    <mat-card-footer>
+      <p></p>
+    </mat-card-footer>
+  </mat-card>
+</section>

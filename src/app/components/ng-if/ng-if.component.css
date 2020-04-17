@@ -1,0 +1,14 @@
+.card-article {
+  padding: 10px 200px 10px 200px
+}
+mat-checkbox {
+  padding: 10px 10px 10px 10px;
+}
+
+section form{
+  display: inline-flex;
+  flex-direction: column;
+}
+section form mat-form-field {
+  width: 650px;
+}

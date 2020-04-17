@@ -1,0 +1,31 @@
+<section class="card-radio">
+  <mat-card>
+    <mat-card-title>
+      Select
+    </mat-card-title>
+    <mat-card-content>
+      <p>Select a color:</p>
+      <mat-radio-group [(ngModel)]="myColor" name="color">
+        <mat-radio-button value="red">Red</mat-radio-button>
+        <mat-radio-button value="green">Green</mat-radio-button>
+        <mat-radio-button value="blue">Blue</mat-radio-button>
+      </mat-radio-group>
+      <br><br>
+      Choose a font size:
+      <form action="">
+        <mat-form-field>
+          <mat-select [(ngModel)]="myFont" name="font">
+            <mat-option value="12px">Font size: 12</mat-option>
+            <mat-option value="16px">Font size: 16</mat-option>
+            <mat-option value="20px">Font size: 20</mat-option>
+            <mat-option value="30px">Font size: 30</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-footer>
+      <p>Result:</p>
+      <p [ngStyle]="{fontSize: myFont, color: myColor}">TEST</p>
+    </mat-card-footer>
+  </mat-card>
+</section>
