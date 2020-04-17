@@ -9,13 +9,15 @@ export class ChangeComponent implements OnInit, OnChanges {
 
   @Input() name: string;
   beforeName: string;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  ngOnChanges(changes: {[propKey: string]: SimpleChange}): void {
-    if (changes.hasOwnProperty('name')){
+  ngOnChanges(changes: {SimpleChange }): void {
+    if (changes.hasOwnProperty('name')) {
       this.beforeName = changes['name'].previousValue;
     }
   }
