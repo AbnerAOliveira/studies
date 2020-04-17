@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OnChangesComponent implements OnInit {
 
+  name : string;
+  newName: string;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  update(){
+    return this.newName = this.name;
   }
 
 }

@@ -32,6 +32,7 @@ import {AppRoutingModule} from "./app-routing.module";
 import { ParentChildComponent } from './components/parent-child/parent-child.component';
 import { TimerComponent } from './components/parent-child/timer/timer.component';
 import { OnChangesComponent } from './components/on-changes/on-changes.component';
+import { ChangeComponent } from './components/on-changes/change/change.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { OnChangesComponent } from './components/on-changes/on-changes.component
     ParentChildComponent,
     TimerComponent,
     OnChangesComponent,
+    ChangeComponent,
   ],
   imports: [
     BrowserModule,
