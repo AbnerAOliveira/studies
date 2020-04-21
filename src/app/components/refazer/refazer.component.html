@@ -1,5 +1,17 @@
-<app-ref #trust [tutis]="tatis"></app-ref>
+<app-ref #trust [tutis]="tatis" (ah)="crush($event)"></app-ref>
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Type" [(ngModel)]="lala">
+    </mat-form-field>
+    <button mat-icon-button color="warn" (click)="upTatis()">
+      <mat-icon>check</mat-icon>
+    </button>
+  </mat-card-content>
+  <mat-card-footer>
+    <!--USING TEMPLATE VARIABLE-->
+    <button mat-button color="primary" (click)="trust.teste()">Say Hillo</button>
+    <button mat-button color="accent" (click)="crush('sopa')">Doly</button>
+  </mat-card-footer>
+</mat-card>
 
-<!--USING TEMPLATE VARIABLE-->
-<button mat-button color="primary" (click)="trust.teste()">Say Hillo</button>
-<button mat-button color="accent" (click)="crush()">Doly</button>

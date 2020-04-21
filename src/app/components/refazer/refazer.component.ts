@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, ViewChild} from '@angular/core';
 import {RefComponent} from "./ref/ref.component";
 
 @Component({
@@ -8,7 +8,8 @@ import {RefComponent} from "./ref/ref.component";
 })
 export class RefazerComponent implements OnInit {
 
-  private tatis:string = 'Dasmena';
+  private tatis: string = 'Dasmena';
+  private lala:string = '';
   @ViewChild(RefComponent, {static: false})
   private ref: RefComponent;
 
@@ -16,10 +17,14 @@ export class RefazerComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
-  crush() {
-    this.ref.teste1('Dalee');
+  crush(dale) {
+    this.ref.teste1(dale);
+  }
+  upTatis(){
+    return this.tatis = this.lala
   }
 
 }
