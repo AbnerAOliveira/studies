@@ -33,6 +33,8 @@ import { ParentChildComponent } from './components/parent-child/parent-child.com
 import { TimerComponent } from './components/parent-child/timer/timer.component';
 import { OnChangesComponent } from './components/on-changes/on-changes.component';
 import { ChangeComponent } from './components/on-changes/change/change.component';
+import { RefComponent } from './components/refazer/ref/ref.component';
+import { RefazerComponent } from './components/refazer/refazer.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { ChangeComponent } from './components/on-changes/change/change.component
     TimerComponent,
     OnChangesComponent,
     ChangeComponent,
+    RefComponent,
+    RefazerComponent,
   ],
   imports: [
     BrowserModule,
