@@ -35,6 +35,9 @@ import { OnChangesComponent } from './components/on-changes/on-changes.component
 import { ChangeComponent } from './components/on-changes/change/change.component';
 import { RefComponent } from './components/refazer/ref/ref.component';
 import { RefazerComponent } from './components/refazer/refazer.component';
+import { MainLifeComponent } from './pages/main-life/main-life.component';
+import { LifeComponent } from './components/life/life.component';
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -58,6 +61,8 @@ import { RefazerComponent } from './components/refazer/refazer.component';
     ChangeComponent,
     RefComponent,
     RefazerComponent,
+    MainLifeComponent,
+    LifeComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +80,7 @@ import { RefazerComponent } from './components/refazer/refazer.component';
     MatProgressBarModule,
     LazyLoadingModule,
     AppRoutingModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
