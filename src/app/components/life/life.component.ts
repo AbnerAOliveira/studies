@@ -48,10 +48,16 @@ export class LifeComponent implements OnInit, OnChanges, OnDestroy {
   newEvent(name: string) {
     let i = this.id++;
     this.events.push({
-      name: this.name,
+      name: name,
       id: i,
       color: this.colors[i % this.colors.length]
-    })
+    });
+    setTimeout(() => {
+      let idx = this.events.findIndex((e) => e.id == i);
+      if (idx >= 0) {
+        this.events.splice(idx, 1)
+      }
+    }, 2000 + this.events.length * 2000);
   }
 
 }

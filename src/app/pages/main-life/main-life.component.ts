@@ -13,7 +13,8 @@ export class MainLifeComponent implements OnInit {
   private food: string;
   private name: string;
   private age: number;
-  private editClient = null;
+  private editClient: number = -1;
+
   constructor() {
   }
 
@@ -21,7 +22,7 @@ export class MainLifeComponent implements OnInit {
   }
 
   save() {
-    if (this.editClient == null){
+    if (this.editClient == -1) {
       this.clients.push({
         name: this.name,
         age: this.age,
@@ -30,6 +31,22 @@ export class MainLifeComponent implements OnInit {
       this.name = null;
       this.age = null;
       this.food = null;
+    } else {
+      this.clients[this.editClient].age = this.age;
+      this.clients[this.editClient].name = this.name;
+      this.clients[this.editClient].food = this.food;
+      this.editClient = -1;
     }
+  }
+
+  edit(i: number) {
+    this.age = this.clients[i].age;
+    this.name = this.clients[i].name;
+    this.food = this.clients[i].food;
+    this.editClient = i;
+  }
+
+  delete(i: number) {
+    this.clients.splice(i, 1)
   }
 }

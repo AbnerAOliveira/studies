@@ -34,24 +34,24 @@
 
     <section>
       <mat-list>
-          <mat-list-item *ngFor="let c of clients">
+        <mat-list-item *ngFor="let c of clients; let i = index">
+          <p mat-line>
             <mat-icon mat-list-icon>person</mat-icon>
             <app-life [name]="c.name" [age]="c.age" [food]="c.food" #child></app-life>
-            <p mat-line>
-              <mat-chip-list>
-                <mat-chip *ngFor="let e of child.events" [color]="e.color" selected></mat-chip>
-              </mat-chip-list>
-            </p>
-            <button mat-icon-button color="warn">
-              <mat-icon>delete</mat-icon>
-            </button>
-            <button mat-icon-button color="accent">
-              <mat-icon>edit</mat-icon>
-            </button>
-          </mat-list-item>
+            <mat-chip-list>
+              <mat-chip *ngFor="let e of child.events" [color]="e.color" selected>
+                {{e.name}}
+              </mat-chip>
+            </mat-chip-list>
+          </p>
+          <button mat-icon-button color="warn" (click)="delete(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" (click)="edit(i)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-list-item>
       </mat-list>
     </section>
-
-
   </mat-card-content>
 </mat-card>
