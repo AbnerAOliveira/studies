@@ -26,6 +26,10 @@ export class LifeComponent implements OnInit, OnChanges, OnDestroy {
   }
 
   ngOnChanges(changes: { SimpleChange }) {
+    for(let c in changes){
+      console.log(changes[c].currentValue);
+    }
+    console.log(changes['name'].previousValue);
     console.log(this.name + 'Change');
     this.newEvent('changes')
   }
