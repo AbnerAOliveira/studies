@@ -38,6 +38,7 @@ import { RefazerComponent } from './components/refazer/refazer.component';
 import { MainLifeComponent } from './pages/main-life/main-life.component';
 import { LifeComponent } from './components/life/life.component';
 import {MatChipsModule} from "@angular/material/chips";
+import { BasicObsComponent } from './components/basic-obs/basic-obs.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import {MatChipsModule} from "@angular/material/chips";
     RefazerComponent,
     MainLifeComponent,
     LifeComponent,
+    BasicObsComponent,
   ],
   imports: [
     BrowserModule,

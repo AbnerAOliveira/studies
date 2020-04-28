@@ -37,7 +37,7 @@
         <mat-list-item *ngFor="let c of clients; let i = index">
           <p mat-line>
             <mat-icon mat-list-icon>person</mat-icon>
-            <app-life [name]="c.name" [age]="c.age" [food]="c.food" #child></app-life>
+            <app-life [name]="c.name" [age]="c.age" [food]="c.food" #child>{{random}}</app-life>
             <mat-chip-list>
               <mat-chip *ngFor="let e of child.events" [color]="e.color" selected>
                 {{e.name}}
