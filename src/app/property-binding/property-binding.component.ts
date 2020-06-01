@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./property-binding.component.css']
 })
 export class PropertyBindingComponent implements OnInit {
+  dale= 'primary'
   btnDisabled = true;
   colors = ['primary', 'accent', 'warn', ''];
   idx = 0;

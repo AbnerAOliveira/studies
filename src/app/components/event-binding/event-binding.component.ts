@@ -45,9 +45,11 @@ export class EventBindingComponent implements OnInit {
   }
 
   changeState(event) {
+    console.log(event);
     this.enableCB = event.checked
   }
   selectOption(event){
+    console.log(event);
     this.optionSelectedBool = true;
      this.optionSelected = `Selected option ${event}`
   }
